@@ -2,21 +2,28 @@
 #include <stdlib.h>
 
 int main()
-{float  a,b,c,d;
+{float  a,b,c,d,e;
 scanf("%f%f",&a,&b);
-c=(double)a*360/12+b*0.5-b*360/60;
-if(c<0)
+c=(double)a*360/12+b*0.5;
+d=(double)b*360/60;
+if(c>d)
 {
-    d=(double)c+180;
+   e=c-d ;
 }
-else if(c>=0&&c<=180)
+else if(c<d)
 {
-d=c;
+e=d-c;
 }
-else if (c>180)
+else if (c=d)
 {
-  d=(double)360-c;
+  e=0;
 }
 
-printf("%.3f",d);
+
+if(e>180)
+    e=e-180;
+
+else
+    e=e;
+printf("%.3f",e);
 }
