@@ -15,7 +15,7 @@ d=c;
 }
 else if (c>180)
 {
-  d=(double)c-180;
+  d=(double)360-c;
 }
 
 printf("%.3f",d);
