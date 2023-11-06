@@ -21,7 +21,7 @@ else if (c=d)
 
 
 if(e>180)
-    e=e-180;
+    e=360-e;
 
 else
     e=e;
